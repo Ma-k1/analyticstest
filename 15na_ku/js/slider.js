@@ -11,8 +11,8 @@ $(function () {
 
   // const images = [
   //   'img/topSlider/top1.jpg',
-  //   'img/topSlider/top2.jpg',
-  //   'img/topSlider/top3.jpg',
+  //   'img/topSlider/TOP2.jpg',
+  //   'img/topSlider/TOP3.jpg',
   //   'img/topSlider/top4.jpg',
   // ];
   const images = document.querySelectorAll('.image');
