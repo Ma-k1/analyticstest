@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* 共通部分用スタイルシート*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+
+/* スムーススクロールの設定 */
+html {
+  /* font-size: 20px; */
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+/* スムーススクロールの設定 */
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.7;
+  font-family: "MS Pゴシック";
+}
+
+/* リンクの下線削除 */
+a {
+  text-decoration: none;
+}
+
+/* リストのマーカー削除*/
+ol li,
+ul li {
+  list-style-type: none;
+}
+
+/* 画像のブラウザ対応 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 表示の最大幅と中央寄せ */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* GoogleFont 'Tulpen One' を使う箇所 */
+h1,
+h2,
+nav li {
+  font-family: 'Tulpen One', cursive;
+}
+
+p {
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+
+/* headerの設定*/
+/* 上部固定 */
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  max-width: 1100px;
+  /*並び順を一番上に*/
+  z-index: 3;
+  background-color: rgba(193, 253, 228, 0.8);
+  padding: 0 20px;
+}
+
+/*h1*/
+h1 {
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  display: inline;
+  height: 80px;
+  font-size: 60px;
+  z-index: 1;
+  position: relative;
+}
+
+/*h1とnavの横並び配置*/
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*スマホ用ハンバーガーメニューの非表示*/
+#open,
+#close {
+  display: none;
+}
+
+nav {
+  display: block;
+}
+
+/* メニューリストを横並びに設定 */
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style-type: none;
+}
+
+.main-nav li a {
+  margin-left: 36px;
+  font-size: 30px;
+  color: #00cfa6;
+}
+
+/* 携帯用クローズボタンを非表示 */
+#close {
+  display: none;
+}
+
+/* main */
+main {
+  margin-top: 10 0px;
+  padding: 20px;
+}
+
+/*小タイトル文字サイズ・カラー*/
+h2 {
+  font-size: 3rem;
+  color: #009977;
+}
+
+h2 span {
+  font-size: 2rem;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  background-color: #00cfa6;
+  color: #FFF;
+  padding: 15px;
+}
+
+/* ブラウザ幅が最大幅600pxのデザイン（スマホ用） */
+@media (max-width: 600px) {
+
+  /* headerの設定*/
+  /* 上部固定解除 */
+  header {
+    position: relative;
+  }
+
+  /*h1とnavの横並び解消*/
+  .flex {
+    display: inline;
+  }
+
+  /*h1*/
+  h1 {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  h1 a {
+    margin: 0 auto;
+  }
+
+  /*メニューリストOPEN用のハンバーガーアイコン*/
+  #open {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  #close {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  /*メニューの設定*/
+  #menu ul {
+    margin: 0;
+    padding: 0;
+    top: 5px;
+
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* リストの下線 */
+  .main-nav li a {
+    display: block;
+    border-bottom: 1px solid #FFF;
+    margin-left: 0;
+    width: 100%;
+  }
+
+
+  /* 最後は線をなくす */
+  nav>ul>li>a :last-of-type {
+    border-bottom: none;
+  }
+
+  /* クローズボタンを表示 */
+
+  nav ul li a {
+    color: #00cfa6;
+    list-style: none;
+    padding: 5px 20px;
+    text-align: center;
+  }
+
+  .main-nav {
+    margin-top: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(41, 41, 41, 0.95);
+    height: 100vh;
+    display: none;
+  }
+
+
+  .main-nav li a:hover {
+    background-color: rgba(88, 88, 88, 0.95);
+  }
+
+  /* 小タイトル文字中央に */
+  h3 {
+    text-align: center;
+  }
+}
